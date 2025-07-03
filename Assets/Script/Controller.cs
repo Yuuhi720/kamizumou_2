@@ -20,7 +20,7 @@ public class Controller : MonoBehaviour
 
     void Update()
     {
-        // キーボードの左右をmovement.xに入れる
+        // キーボードの左右とA・Dをmovement.xに入れる
         movement.x = Input.GetAxisRaw("Horizontal");
 
     }

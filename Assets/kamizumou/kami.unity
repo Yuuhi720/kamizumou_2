@@ -184,12 +184,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 537677f5e3254f14ebbcc7b0ed211125, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b0b21fe913e395341abbeabcb8f127cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -203,8 +203,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526611479}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.28, y: -3.63, z: 0}
-  m_LocalScale: {x: 4, y: 1.935543, z: 1}
+  m_LocalPosition: {x: 0.1, y: -3.92, z: 0}
+  m_LocalScale: {x: 5, y: 1.935543, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -274,7 +274,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 4, y: 4}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 4, y: 4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -309,6 +309,7 @@ GameObject:
   - component: {fileID: 741882601}
   - component: {fileID: 741882602}
   - component: {fileID: 741882603}
+  - component: {fileID: 741882604}
   m_Layer: 0
   m_Name: Rikishi2
   m_TagString: Untagged
@@ -376,7 +377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741882598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.09, y: 0.03, z: 0}
+  m_LocalPosition: {x: 1.44, y: -0.27, z: 0}
   m_LocalScale: {x: 0.32489145, y: 0.3304778, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -435,7 +436,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741882598}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af0c36e28e8a2324b99def87ba73dc75, type: 3}
   m_Name: 
@@ -468,6 +469,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &741882604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741882598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0728900854a78cf43b4994dd0cb54c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlKey: 108
+  tapForce: 3
 --- !u!1 &1257535489
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +746,7 @@ GameObject:
   - component: {fileID: 1925360967}
   - component: {fileID: 1925360968}
   - component: {fileID: 1925360969}
+  - component: {fileID: 1925360970}
   m_Layer: 0
   m_Name: Rikishi1
   m_TagString: Untagged
@@ -798,7 +814,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925360964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.95, y: 0.02, z: 0}
+  m_LocalPosition: {x: -1.64, y: -0.05, z: 0}
   m_LocalScale: {x: 0.31947958, y: 0.3303924, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -857,7 +873,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925360964}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af0c36e28e8a2324b99def87ba73dc75, type: 3}
   m_Name: 
@@ -890,3 +906,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1925360970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925360964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d20643ef58e5a82419c74990a9f612cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlKey: 97
+  tapForce: 3
