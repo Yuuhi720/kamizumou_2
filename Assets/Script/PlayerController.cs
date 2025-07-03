@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public KeyCode controlKey = KeyCode.A; // 操作キー（AキーやLキーなど）
-    public float tapForce = 3f;            // ジャンプ時に加える力の大きさ
+    public float tapForce = 30f;            // ジャンプ時に加える力の大きさ
 
-    private Rigidbody2D rb;                
+    private Rigidbody2D rb;
     private bool isGrounded = false;       // 地面にいるかどうか
 
     void Start()
@@ -40,4 +40,5 @@ public class PlayerController : MonoBehaviour
     {
         isGrounded = false;
     }
+
 }
