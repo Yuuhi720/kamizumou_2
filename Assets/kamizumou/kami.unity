@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 526611483}
   - component: {fileID: 526611482}
   - component: {fileID: 526611484}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dohyou
   m_TagString: Dohyou
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 741882602}
   - component: {fileID: 741882603}
   - component: {fileID: 741882604}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rikishi2
   m_TagString: Rikishi2
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741882598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.42, y: 0.18, z: 0}
+  m_LocalPosition: {x: 1.24, y: -0.63, z: 0}
   m_LocalScale: {x: 0.32489145, y: 0.3304778, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -455,7 +455,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -484,6 +484,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpKey: 108
   maxJumpForce: 20
+  groundCheck: {fileID: 921207674}
+  groundCheckRadius: 0.1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!1 &921207673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 921207674}
+  m_Layer: 6
+  m_Name: GroundCheck
+  m_TagString: Dohyou
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &921207674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921207673}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1257535489
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,8 +626,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257535489}
   m_LocalRotation: {x: -0, y: -0, z: 0.0002858979, w: 1}
-  m_LocalPosition: {x: -13.92, y: 2.26, z: 0}
-  m_LocalScale: {x: 14.638312, y: 0.9713, z: 1}
+  m_LocalPosition: {x: 0.3404, y: 6.42, z: 0}
+  m_LocalScale: {x: 14.638312, y: -1.2302516, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -748,7 +784,8 @@ GameObject:
   - component: {fileID: 1925360968}
   - component: {fileID: 1925360969}
   - component: {fileID: 1925360970}
-  m_Layer: 0
+  - component: {fileID: 1925360971}
+  m_Layer: 6
   m_Name: Rikishi1
   m_TagString: Rikishi1
   m_Icon: {fileID: 0}
@@ -815,7 +852,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925360964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.91, y: 0.39, z: 0}
+  m_LocalPosition: {x: -1.8, y: -0.45, z: 0}
   m_LocalScale: {x: 0.31947958, y: 0.3303924, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -874,7 +911,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925360964}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af0c36e28e8a2324b99def87ba73dc75, type: 3}
   m_Name: 
@@ -907,7 +944,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1925360970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -915,13 +952,56 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925360964}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d20643ef58e5a82419c74990a9f612cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jumpKey: 119
   maxJumpForce: 20
+--- !u!114 &1925360971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925360964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf0163ce93231648b51089096811723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2040459641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2040459642}
+  m_Layer: 6
+  m_Name: GroundCheck2
+  m_TagString: Dohyou
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2040459642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040459641}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2062058335
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,7 +1075,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 16, y: 10}
+  m_Size: {x: 30, y: 4}
   m_EdgeRadius: 0
 --- !u!4 &2062058338
 Transform:
@@ -1005,7 +1085,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2062058335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.010000229, y: -0.06, z: -0.00420555}
+  m_LocalPosition: {x: 0.010000229, y: -4.02, z: -0.00420555}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

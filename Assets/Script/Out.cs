@@ -11,12 +11,12 @@ public class Out : MonoBehaviour
 
         if (other.CompareTag("Rikishi1"))
         {
-            Debug.Log("Rikishi1が場外！Rikishi2の勝ち！");
+           
             EndGame("Rikishi2の勝ち！");
         }
         else if (other.CompareTag("Rikishi2"))
         {
-            Debug.Log("Rikishi2が場外！Rikishi1の勝ち！");
+           
             EndGame("Rikishi1の勝ち！");
         }
     }
@@ -24,7 +24,6 @@ public class Out : MonoBehaviour
     void EndGame(string winnerText)
     {
         gameEnded = true;
-       // Time.timeScale = 0f; // ゲームを一時停止
         Debug.Log(winnerText + " ゲーム終了！");
     }
 }

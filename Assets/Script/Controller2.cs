@@ -14,13 +14,13 @@ public class Controller2 : MonoBehaviour
 
     void Start()
     {
-        // ゲームが始まったらRigidbody2Dに入れる
+        // ゲームが始まったらRigidbodyに入れる
         rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        // キーボードの左右とA・Dをmovement.xに入れる
+      
         movement.y = Input.GetAxisRaw("vertical");
 
     }

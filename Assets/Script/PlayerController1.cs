@@ -14,7 +14,7 @@ public class PlayerController1 : MonoBehaviour
 
     void Start()
     {
-        
+
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -27,7 +27,7 @@ public class PlayerController1 : MonoBehaviour
             jumpCharge = Mathf.Clamp(jumpCharge, 0, maxJumpForce); // 上限あり
         }
 
-        // ジャンプキーを離したときジャンプ発動
+        // ジャンプキーを離したときジャンプ発
         if (Input.GetKeyUp(jumpKey) && isGrounded)
         {
             // 入力された方向を調べる
@@ -36,7 +36,6 @@ public class PlayerController1 : MonoBehaviour
 
             if (Input.GetKey(KeyCode.A)) h = -1f; // 左
             if (Input.GetKey(KeyCode.D)) h = 1f;  // 右
-            if (Input.GetKey(KeyCode.S)) v = -1f; // 下
             if (Input.GetKey(KeyCode.W)) v = 1f;  // 上
 
             Vector2 direction = new Vector2(h, v);
@@ -45,7 +44,7 @@ public class PlayerController1 : MonoBehaviour
             if (direction == Vector2.zero)
                 direction = Vector2.up;
 
-            // 指定方向にジャンプする
+            // 指定方向に移動する
             Vector2 force = direction.normalized * jumpCharge;
             rb.AddForce(force, ForceMode2D.Impulse);
 
@@ -55,7 +54,7 @@ public class PlayerController1 : MonoBehaviour
         }
     }
 
-    // 地面に着地したときに呼ばれる
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Dohyou"))
@@ -64,7 +63,6 @@ public class PlayerController1 : MonoBehaviour
         }
     }
 
-    // 地面から離れたときに呼ばれる
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Dohyou"))
