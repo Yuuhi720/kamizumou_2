@@ -1,10 +1,11 @@
+
 using UnityEngine;
 
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerController1 : MonoBehaviour
+public class PlayerController2 : MonoBehaviour
 {
-    public KeyCode jumpKey = KeyCode.W; // ジャンプに使うキー
+    public KeyCode jumpKey = KeyCode.L; // ジャンプに使うキー
 
     public float maxJumpForce = 20f;    // 最大ジャンプ力
     private float jumpCharge = 0f;      // 溜めたジャンプ力
@@ -33,10 +34,9 @@ public class PlayerController1 : MonoBehaviour
             // 入力された方向を調べる
             float h = 0f;
             float v = 0f;
-
-            if (Input.GetKey(KeyCode.A)) h = -1f; // 左
-            if (Input.GetKey(KeyCode.D)) h = 1f;  // 右
-            if (Input.GetKey(KeyCode.W)) v = 1f;  // 上
+            if (Input.GetKey(KeyCode.LeftArrow)) h = -1f;
+            if (Input.GetKey(KeyCode.RightArrow)) h = 1f;
+            if (Input.GetKey(KeyCode.UpArrow)) v = 1f;
 
             Vector2 direction = new Vector2(h, v);
 
