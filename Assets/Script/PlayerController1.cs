@@ -7,7 +7,7 @@ public class PlayerController1 : MonoBehaviour
     public KeyCode jumpKey = KeyCode.W; // ジャンプに使うキー
 
     public float maxJumpForce = 20f;    // 最大ジャンプ力
-    private float jumpCharge = 0f;      // ためたジャンプ力
+    private float jumpCharge = 0f;      // 溜めたジャンプ力
 
     private Rigidbody2D rb;
     private bool isGrounded = false;    // 地面に接しているかどうか
@@ -27,7 +27,7 @@ public class PlayerController1 : MonoBehaviour
             jumpCharge = Mathf.Clamp(jumpCharge, 0, maxJumpForce); // 上限あり
         }
 
-        // ジャンプキーを離したときジャンプ発
+        // ジャンプキーを離したときジャンプ
         if (Input.GetKeyUp(jumpKey) && isGrounded)
         {
             // 入力された方向を調べる
