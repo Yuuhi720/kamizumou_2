@@ -23,7 +23,7 @@ public class PlayerController2 : MonoBehaviour
     void Update()
     {
         //’n–Ê‚ÉG‚ê‚Ä‚¢‚é‚©‚Ç‚¤‚©’²‚×‚é
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        //isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         //ƒWƒƒƒ“ƒv—Í‚ğ—­‚ß‚é
         if (Input.GetKey(jumpKey) && isGrounded)
